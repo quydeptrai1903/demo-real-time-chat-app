@@ -1,0 +1,27 @@
+.topBarContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 7vh;
+  align-items: center;
+  background-color: rgb(24, 119, 242);
+  box-shadow: 0 1px 3px #66a3ff;
+}
+
+.heading {
+  color: white;
+  margin-left: 1.5rem;
+}
+
+.closeBtn {
+  display: block;
+  height: 49px;
+  width: 49px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 1.5rem;
+}

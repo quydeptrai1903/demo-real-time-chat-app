@@ -1,0 +1,40 @@
+.messageContainer {
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+}
+
+.messageText {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  font-size: 22px;
+  width: fit-content;
+}
+
+.userName {
+  font-size: 15px;
+  padding: 0 10px;
+  width: fit-content;
+  color: #8c8c8c;
+}
+
+.sendMessage {
+  display: flex;
+  align-items: flex-end;
+}
+
+.receiveMessage {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sendText {
+  background-color: rgb(24, 119, 242);
+  color: white;
+}
+
+.receiveText {
+  background-color: #f2f2f2;
+  color: #404040;
+}
