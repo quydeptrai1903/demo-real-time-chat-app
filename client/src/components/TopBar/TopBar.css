@@ -12,11 +12,18 @@
   margin-left: 1.5rem;
 }
 
-.closeBtn {
-  display: block;
-  height: 49px;
-  width: 49px;
-  color: white;
+svg {
+  height: 34px;
+  width: 34px;
+  fill: white;
+}
+
+.find {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
   font-size: 20px;
   font-weight: 700;
   border: none;

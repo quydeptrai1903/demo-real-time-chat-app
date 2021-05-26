@@ -1,18 +1,24 @@
-import React from "react";
-import ScrollToBottom from "react-scroll-to-bottom";
-import "./MessagesContainer.css";
+import React, { useRef, useEffect } from 'react';
+import './MessagesContainer.css';
 
-import Message from "../Message/Message";
+import Message from '../Message/Message';
 
 const MessagesContainer = ({ messages, name }) => {
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(scrollToBottom, [messages]);
+
   return (
-    <ScrollToBottom>
-      <div className="messagesContainer">
-        {messages.map((message, i) => (
-          <Message key={i} message={message} name={name} />
-        ))}
-      </div>
-    </ScrollToBottom>
+    <div className='messagesContainer'>
+      {messages.map((message, i) => (
+        <Message key={i} message={message} name={name} />
+      ))}
+      <div ref={messagesEndRef} />
+    </div>
   );
 };
 

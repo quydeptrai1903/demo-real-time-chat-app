@@ -1,12 +1,21 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import FindIcon from './FindIcon';
+import './TopBar.css';
 
-import "./TopBar.css";
-
-const TopBar = () => {
+const TopBar = ({ findNewStranger }) => {
   return (
-    <div className="topBarContainer">
-      <h1 className="heading">Chat app</h1>
-      <button className="closeBtn">Close</button>
+    <div className='topBarContainer'>
+      <Link to='/'>
+        <h1 className='heading'>Chat app</h1>
+      </Link>
+      <div
+        className='find'
+        onClick={() => {
+          findNewStranger();
+        }}>
+        <FindIcon />
+      </div>
     </div>
   );
 };

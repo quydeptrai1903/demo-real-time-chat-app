@@ -1,37 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import "./Join.css";
+import './Join.css';
 
 const Join = () => {
-  const [name, setName] = useState("");
-  const [room, setRoom] = useState("");
+  const [name, setName] = useState('');
 
   const getName = (e) => setName(e.target.value);
-  const getRoom = (e) => setRoom(e.target.value);
   return (
-    <div className="joinOuterContainer">
-      <div className="joinInnerContainer">
-        <div className="headingJoin">Chat app</div>
-        <div className="inputContainer">
+    <div className='joinOuterContainer'>
+      <div className='joinInnerContainer'>
+        <div className='headingJoin'>Chat app</div>
+        <div className='inputContainer'>
           <input
-            className="inputText"
-            type="text"
-            placeholder="Enter your name..."
+            className='inputText'
+            type='text'
+            placeholder='Enter your name...'
             onChange={getName}
           />
-          <input
-            className="inputText"
-            type="text"
-            placeholder="Enter ID room"
-            onChange={getRoom}
-          />
-          <Link className="containerBtn" to={`/chat?name=${name}&room=${room}`}>
+          <Link className='containerBtn' to={`/chat?name=${name}`}>
             <button
-              onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-              className="joinBtn"
-            >
-              Join
+              onClick={(e) => (!name ? e.preventDefault() : null)}
+              className='joinBtn'>
+              Find
             </button>
           </Link>
         </div>

@@ -5,10 +5,22 @@
   align-items: center;
 }
 
+.disconnect-btn {
+  height: 48px;
+  width: fit-content;
+  padding: 0 16px;
+  background-color: #d9534f;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 47px;
+}
+
 .messageInput {
   display: block;
   width: 100%;
-  height: 70%;
+  height: 48px;
   outline: none;
   border: none;
   border: solid 1px #a6a6a6;
@@ -22,7 +34,7 @@
   display: block;
   border: none;
   outline: none;
-  height: 70%;
+  height: 48px;
   width: 80px;
   color: white;
   font-size: 20px;
@@ -32,6 +44,6 @@
   cursor: pointer;
 }
 
-.sendBtn:hover{
+.sendBtn:hover {
   background-color: rgb(51, 135, 247);
 }
